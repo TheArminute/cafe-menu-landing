@@ -8,89 +8,96 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Coffee Shop Color Palette - Creamy, Chocolate, Black, White */
+    --background: 25 15% 8%;  /* Rich dark coffee black */
+    --foreground: 45 25% 95%; /* Creamy white */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 25 12% 12%;
+    --card-foreground: 45 25% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 25 12% 12%;
+    --popover-foreground: 45 25% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 35 65% 65%;     /* Golden coffee cream */
+    --primary-foreground: 25 15% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 25 25% 18%;   /* Warm chocolate */
+    --secondary-foreground: 45 25% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 25 20% 15%;
+    --muted-foreground: 35 15% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 40 85% 75%;      /* Bright golden accent */
+    --accent-foreground: 25 15% 8%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 45 25% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 35 65% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Coffee-specific design tokens */
+    --coffee-cream: 45 35% 92%;    /* Light cream */
+    --coffee-latte: 35 25% 85%;    /* Latte color */
+    --coffee-medium: 25 45% 45%;   /* Medium roast */
+    --coffee-dark: 20 30% 20%;     /* Dark roast */
+    --coffee-espresso: 25 15% 8%;  /* Espresso black */
+    
+    /* Gradients */
+    --gradient-coffee: linear-gradient(135deg, hsl(var(--coffee-latte)), hsl(var(--primary)));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(var(--coffee-dark)));
+    --gradient-gold: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)));
+    
+    /* Shadows */
+    --shadow-warm: 0 10px 30px -10px hsl(var(--coffee-medium) / 0.4);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 25 12% 12%;
+    --sidebar-foreground: 45 25% 95%;
+    --sidebar-primary: 35 65% 65%;
+    --sidebar-primary-foreground: 25 15% 8%;
+    --sidebar-accent: 25 20% 18%;
+    --sidebar-accent-foreground: 45 25% 95%;
+    --sidebar-border: 25 20% 20%;
+    --sidebar-ring: 35 65% 65%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
+    /* Same colors for consistency - coffee theme works in both modes */
+    --background: 25 15% 8%;
+    --foreground: 45 25% 95%;
+    --card: 25 12% 12%;
+    --card-foreground: 45 25% 95%;
+    --popover: 25 12% 12%;
+    --popover-foreground: 45 25% 95%;
+    --primary: 35 65% 65%;
+    --primary-foreground: 25 15% 8%;
+    --secondary: 25 25% 18%;
+    --secondary-foreground: 45 25% 95%;
+    --muted: 25 20% 15%;
+    --muted-foreground: 35 15% 70%;
+    --accent: 40 85% 75%;
+    --accent-foreground: 25 15% 8%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive-foreground: 45 25% 95%;
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 35 65% 65%;
+    --sidebar-background: 25 12% 12%;
+    --sidebar-foreground: 45 25% 95%;
+    --sidebar-primary: 35 65% 65%;
+    --sidebar-primary-foreground: 25 15% 8%;
+    --sidebar-accent: 25 20% 18%;
+    --sidebar-accent-foreground: 45 25% 95%;
+    --sidebar-border: 25 20% 20%;
+    --sidebar-ring: 35 65% 65%;
   }
 }
 
@@ -101,5 +108,94 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Noto Serif', 'Times New Roman', serif;
+  }
+
+  /* Persian/Arabic text support */
+  .persian-text {
+    font-family: 'Vazir', 'Tahoma', sans-serif;
+    direction: rtl;
+    text-align: center;
+  }
+  
+  .arabic-text {
+    font-family: 'Amiri', 'Times New Roman', serif;
+    direction: rtl;
+    text-align: center;
+  }
+}
+
+@layer components {
+  /* Coffee Menu Item */
+  .coffee-menu-item {
+    @apply relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary to-accent;
+    @apply text-primary-foreground font-semibold text-lg;
+    @apply transition-all duration-500 hover:scale-105 hover:shadow-2xl;
+    @apply border-2 border-accent/20 hover:border-accent/60;
+    box-shadow: var(--shadow-warm);
+  }
+  
+  .coffee-menu-item:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px) scale(1.02);
+  }
+  
+  /* Decorative pattern overlay */
+  .coffee-menu-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 20%, hsl(var(--accent) / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, hsl(var(--primary) / 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  /* Logo glow effect */
+  .logo-glow {
+    filter: drop-shadow(0 0 20px hsl(var(--accent) / 0.6));
+    transition: var(--transition-smooth);
+  }
+  
+  .logo-glow:hover {
+    filter: drop-shadow(0 0 30px hsl(var(--accent) / 0.8));
+    transform: scale(1.05);
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }

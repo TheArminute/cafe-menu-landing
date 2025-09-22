@@ -57,6 +57,32 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Coffee theme colors
+        coffee: {
+          cream: "hsl(var(--coffee-cream))",
+          latte: "hsl(var(--coffee-latte))",
+          medium: "hsl(var(--coffee-medium))",
+          dark: "hsl(var(--coffee-dark))",
+          espresso: "hsl(var(--coffee-espresso))",
+        },
+      },
+      backgroundImage: {
+        'gradient-coffee': 'var(--gradient-coffee)',
+        'gradient-dark': 'var(--gradient-dark)',
+        'gradient-gold': 'var(--gradient-gold)',
+      },
+      boxShadow: {
+        'warm': 'var(--shadow-warm)',
+        'glow': 'var(--shadow-glow)',
+      },
+      transitionProperty: {
+        'smooth': 'var(--transition-smooth)',
+        'bounce': 'var(--transition-bounce)',
+      },
+      fontFamily: {
+        'persian': ['Vazir', 'Tahoma', 'sans-serif'],
+        'arabic': ['Amiri', 'Times New Roman', 'serif'],
+        'serif': ['Noto Serif', 'Times New Roman', 'serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
