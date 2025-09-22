@@ -1,4 +1,4 @@
-import { Coffee, Phone, MapPin } from "lucide-react";
+import { Coffee, Phone, MapPin, Instagram } from "lucide-react";
 import coffeeLogo from "@/assets/coffee-logo.png";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-dark flex flex-col relative overflow-hidden">
@@ -31,20 +31,18 @@ const Index = () => {
 
         {/* Menu Options */}
         <div className="space-y-6 w-full max-w-md animate-fade-in-up stagger-2">
-          <button className="coffee-menu-item w-full py-6 px-8 flex items-center justify-between group">
-            <div className="flex items-center space-x-4 rtl:space-x-reverse">
-              <Coffee className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform" />
+          <button className="coffee-menu-item w-full py-6 px-8 flex items-center justify-end group">
+            <div className="flex items-center space-x-4 rtl:space-x-reverse text-right">
               <span className="persian-text text-xl font-semibold">منوی کافه</span>
+              <Coffee className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform" />
             </div>
-            <div className="w-2 h-2 rounded-full bg-primary-foreground opacity-60 group-hover:opacity-100 transition-opacity"></div>
           </button>
 
-          <button className="coffee-menu-item w-full py-6 px-8 flex items-center justify-between group">
-            <div className="flex items-center space-x-4 rtl:space-x-reverse">
+          <button className="coffee-menu-item w-full py-6 px-8 flex items-center justify-end group">
+            <div className="flex items-center space-x-4 rtl:space-x-reverse text-right">
+              <span className="persian-text text-xl font-semibold">آدرس و تماس</span>  
               <MapPin className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform" />
-              <span className="persian-text text-xl font-semibold">آدرس و تماس</span>
             </div>
-            <div className="w-2 h-2 rounded-full bg-primary-foreground opacity-60 group-hover:opacity-100 transition-opacity"></div>
           </button>
         </div>
 
@@ -65,8 +63,8 @@ const Index = () => {
           <a href="#location" className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300" aria-label="آدرس کافه">
             <MapPin className="w-5 h-5 text-foreground" />
           </a>
-          <a href="#menu" className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300" aria-label="منوی کافه">
-            <Coffee className="w-5 h-5 text-foreground" />
+          <a href="https://instagram.com" className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300" aria-label="اینستاگرام">
+            <Instagram className="w-5 h-5 text-foreground" />
           </a>
         </div>
       </footer>
