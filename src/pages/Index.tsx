@@ -1,9 +1,7 @@
 import { Coffee, Phone, MapPin } from "lucide-react";
 import coffeeLogo from "@/assets/coffee-logo.png";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-dark flex flex-col relative overflow-hidden">
+  return <div className="min-h-screen bg-gradient-dark flex flex-col relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-accent animate-float"></div>
@@ -14,11 +12,7 @@ const Index = () => {
       {/* Header with Logo */}
       <header className="flex justify-center pt-16 pb-8">
         <div className="logo-glow animate-fade-in-up">
-          <img 
-            src={coffeeLogo} 
-            alt="کافه دلگرم - Delgarm Cafe" 
-            className="w-32 h-32 object-contain"
-          />
+          <img src={coffeeLogo} alt="کافه دلگرم - Delgarm Cafe" className="w-32 h-32 object-contain" />
         </div>
       </header>
 
@@ -26,9 +20,7 @@ const Index = () => {
       <main className="flex-1 flex flex-col items-center justify-center px-8 space-y-16">
         {/* Welcome Text */}
         <div className="text-center space-y-6 animate-fade-in-up stagger-1">
-          <h1 className="arabic-text text-6xl md:text-7xl font-bold text-primary mb-8">
-            دلگرم
-          </h1>
+          <h1 className="arabic-text text-6xl md:text-7xl font-bold text-primary mb-8">mine</h1>
           <h2 className="persian-text text-2xl md:text-3xl text-foreground font-light mb-4">
             کافه‌ای با طعم گرمای خانه
           </h2>
@@ -67,31 +59,17 @@ const Index = () => {
       {/* Footer */}
       <footer className="pb-8 flex justify-center animate-fade-in-up stagger-3">
         <div className="flex space-x-8 rtl:space-x-reverse">
-          <a 
-            href="tel:+98-21-1234-5678" 
-            className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300"
-            aria-label="تماس تلفنی"
-          >
+          <a href="tel:+98-21-1234-5678" className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300" aria-label="تماس تلفنی">
             <Phone className="w-5 h-5 text-foreground" />
           </a>
-          <a 
-            href="#location" 
-            className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300"
-            aria-label="آدرس کافه"
-          >
+          <a href="#location" className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300" aria-label="آدرس کافه">
             <MapPin className="w-5 h-5 text-foreground" />
           </a>
-          <a 
-            href="#menu" 
-            className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300"
-            aria-label="منوی کافه"
-          >
+          <a href="#menu" className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300" aria-label="منوی کافه">
             <Coffee className="w-5 h-5 text-foreground" />
           </a>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
