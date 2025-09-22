@@ -1,4 +1,4 @@
-import { Coffee, Phone, MapPin, Instagram } from "lucide-react";
+import { Coffee, Instagram } from "lucide-react";
 import coffeeLogo from "@/assets/coffee-logo.png";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-dark flex flex-col relative overflow-hidden">
@@ -29,14 +29,21 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Menu Options */}
+        {/* Menu Section */}
         <div className="space-y-6 w-full max-w-md animate-fade-in-up stagger-2">
-          <button className="coffee-menu-item w-full py-6 px-8 flex items-center justify-end group">
-            <div className="flex items-center space-x-4 rtl:space-x-reverse text-right">
-              <span className="persian-text text-xl font-semibold mx-[63px] px-[45px] py-0 my-0">منوی کافه</span>
-              <Coffee className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform" />
+          <div className="text-center">
+            {/* Top decorative line */}
+            <div className="h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent mb-6"></div>
+            
+            {/* Menu text */}
+            <div className="persian-text text-2xl font-semibold text-accent flex items-center justify-center space-x-3 rtl:space-x-reverse">
+              <Coffee className="w-7 h-7" />
+              <span>منوی کافه</span>
             </div>
-          </button>
+            
+            {/* Bottom decorative line */}
+            <div className="h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent mt-6"></div>
+          </div>
         </div>
 
         {/* Decorative Quote */}
@@ -50,12 +57,6 @@ const Index = () => {
       {/* Footer */}
       <footer className="pb-8 flex justify-center animate-fade-in-up stagger-3 mx-0 px-0 my-[15px]">
         <div className="flex space-x-8 rtl:space-x-reverse">
-          <a href="tel:+98-21-1234-5678" className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300" aria-label="تماس تلفنی">
-            <Phone className="w-5 h-5 text-foreground" />
-          </a>
-          <a href="#location" className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300" aria-label="آدرس کافه">
-            <MapPin className="w-5 h-5 text-foreground" />
-          </a>
           <a href="https://instagram.com" className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300" aria-label="اینستاگرام">
             <Instagram className="w-5 h-5 text-foreground" />
           </a>
