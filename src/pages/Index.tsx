@@ -1,6 +1,9 @@
 import { Coffee, Instagram } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import coffeeLogo from "@/assets/coffee-logo.png";
 const Index = () => {
+  const navigate = useNavigate();
+  
   return <div className="min-h-screen bg-gradient-dark flex flex-col relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5 mx-0">
@@ -31,19 +34,22 @@ const Index = () => {
 
         {/* Menu Section */}
         <div className="space-y-6 w-full max-w-md animate-fade-in-up stagger-2">
-          <div className="text-center">
+          <button 
+            onClick={() => navigate('/menu')}
+            className="text-center w-full group cursor-pointer transition-all duration-300 hover:scale-105"
+          >
             {/* Top decorative line */}
-            <div className="h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent mb-6"></div>
+            <div className="h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent mb-6 group-hover:via-primary transition-colors duration-300"></div>
             
             {/* Menu text */}
-            <div className="persian-text text-2xl font-semibold text-accent flex items-center justify-center space-x-3 rtl:space-x-reverse">
-              <Coffee className="w-7 h-7" />
+            <div className="persian-text text-2xl font-semibold text-accent flex items-center justify-center space-x-3 rtl:space-x-reverse group-hover:text-primary transition-colors duration-300">
+              <Coffee className="w-7 h-7 group-hover:scale-110 transition-transform duration-300" />
               <span>منوی کافه</span>
             </div>
             
             {/* Bottom decorative line */}
-            <div className="h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent mt-6"></div>
-          </div>
+            <div className="h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent mt-6 group-hover:via-primary transition-colors duration-300"></div>
+          </button>
         </div>
 
         {/* Decorative Quote */}
