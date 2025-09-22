@@ -9,26 +9,26 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Coffee Shop Color Palette - Rich Browns, Warm Creams */
-    --background: 20 25% 15%;  /* Deep warm brown */
-    --foreground: 35 35% 90%; /* Warm cream white */
+    --background: 18 35% 12%;  /* Rich dark chocolate */
+    --foreground: 40 45% 95%; /* Creamy white */
 
-    --card: 25 20% 18%;
-    --card-foreground: 35 35% 90%;
+    --card: 20 30% 16%;
+    --card-foreground: 40 45% 95%;
 
-    --popover: 25 20% 18%;
-    --popover-foreground: 35 35% 90%;
+    --popover: 20 30% 16%;
+    --popover-foreground: 40 45% 95%;
 
-    --primary: 30 45% 55%;     /* Rich coffee brown */
-    --primary-foreground: 35 35% 90%;
+    --primary: 32 55% 60%;     /* Warm coffee brown */
+    --primary-foreground: 40 45% 95%;
 
-    --secondary: 28 35% 25%;   /* Darker warm chocolate */
-    --secondary-foreground: 35 35% 90%;
+    --secondary: 22 40% 20%;   /* Deep warm brown */
+    --secondary-foreground: 40 45% 95%;
 
-    --muted: 25 25% 20%;
-    --muted-foreground: 30 20% 65%;
+    --muted: 20 35% 18%;
+    --muted-foreground: 32 25% 70%;
 
-    --accent: 35 55% 70%;      /* Warm coffee cream */
-    --accent-foreground: 20 25% 15%;
+    --accent: 38 65% 75%;      /* Golden coffee cream */
+    --accent-foreground: 18 35% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 45 25% 95%;

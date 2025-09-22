@@ -37,13 +37,6 @@ const Index = () => {
               <Coffee className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform" />
             </div>
           </button>
-
-          <button className="coffee-menu-item w-full py-6 px-8 flex items-center justify-end group">
-            <div className="flex items-center space-x-4 rtl:space-x-reverse text-right">
-              <span className="persian-text text-xl font-semibold">آدرس و تماس</span>  
-              <MapPin className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform" />
-            </div>
-          </button>
         </div>
 
         {/* Decorative Quote */}
