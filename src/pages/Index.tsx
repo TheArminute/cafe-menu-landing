@@ -3,7 +3,7 @@ import coffeeLogo from "@/assets/coffee-logo.png";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-dark flex flex-col relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 mx-0">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-accent animate-float"></div>
         <div className="absolute bottom-20 right-10 w-24 h-24 rounded-full bg-primary animate-float stagger-2"></div>
         <div className="absolute top-1/2 left-1/4 w-16 h-16 rounded-full bg-coffee-latte animate-float stagger-3"></div>
@@ -33,7 +33,7 @@ const Index = () => {
         <div className="space-y-6 w-full max-w-md animate-fade-in-up stagger-2">
           <button className="coffee-menu-item w-full py-6 px-8 flex items-center justify-end group">
             <div className="flex items-center space-x-4 rtl:space-x-reverse text-right">
-              <span className="persian-text text-xl font-semibold">منوی کافه</span>
+              <span className="persian-text text-xl font-semibold mx-[63px] px-[45px] py-0 my-0">منوی کافه</span>
               <Coffee className="w-6 h-6 text-primary-foreground group-hover:scale-110 transition-transform" />
             </div>
           </button>
@@ -41,14 +41,14 @@ const Index = () => {
 
         {/* Decorative Quote */}
         <div className="text-center animate-fade-in-up stagger-3">
-          <blockquote className="persian-text text-coffee-latte italic text-lg font-light">
+          <blockquote className="persian-text text-coffee-latte italic text-lg font-light my-[2px]">
             "قهوه، زبان مشترک دل‌هاست"
           </blockquote>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="pb-8 flex justify-center animate-fade-in-up stagger-3">
+      <footer className="pb-8 flex justify-center animate-fade-in-up stagger-3 mx-0 px-0 my-[15px]">
         <div className="flex space-x-8 rtl:space-x-reverse">
           <a href="tel:+98-21-1234-5678" className="w-12 h-12 rounded-full bg-secondary/50 backdrop-blur flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300" aria-label="تماس تلفنی">
             <Phone className="w-5 h-5 text-foreground" />
