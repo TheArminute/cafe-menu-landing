@@ -2,102 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* ==========================================================================
+   پالت رنگی جدید: تم گرم شیری و شکلاتی
+   ==========================================================================
 */
 
 @layer base {
   :root {
-    /* Coffee Shop Color Palette - Rich Browns, Warm Creams */
-    --background: 18 35% 12%;  /* Rich dark chocolate */
-    --foreground: 40 45% 95%; /* Creamy white */
+    /* ----- حالت روشن (Light Mode) با پس‌زمینه شیری ----- */
+    --background: 30 25% 96%;             /* رنگ شیری برای پس‌زمینه اصلی */
+    --foreground: 20 15% 10%;            /* تقریباً مشکی برای متن اصلی */
+    
+    --card: 0 0% 100%;                     /* سفید خالص برای کارت‌ها جهت ایجاد تضاد */
+    --card-foreground: 20 15% 10%;
 
-    --card: 20 30% 16%;
-    --card-foreground: 40 45% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 15% 10%;
 
-    --popover: 20 30% 16%;
-    --popover-foreground: 40 45% 95%;
+    --primary: 25 45% 35%;               /* قهوه‌ای شکلاتی غلیظ برای دکمه‌ها */
+    --primary-foreground: 30 25% 96%;    /* متن شیری برای روی دکمه‌های شکلاتی */
 
-    --primary: 32 55% 60%;     /* Warm coffee brown */
-    --primary-foreground: 40 45% 95%;
+    --secondary: 30 15% 93%;             /* رنگ شیری کمی تیره‌تر برای پس‌زمینه‌های ثانویه */
+    --secondary-foreground: 20 15% 10%;
 
-    --secondary: 22 40% 20%;   /* Deep warm brown */
-    --secondary-foreground: 40 45% 95%;
+    --muted: 30 15% 90%;
+    --muted-foreground: 20 15% 40%;      /* خاکستری گرم برای متن‌های کم‌اهمیت */
 
-    --muted: 20 35% 18%;
-    --muted-foreground: 32 25% 70%;
-
-    --accent: 38 65% 75%;      /* Golden coffee cream */
-    --accent-foreground: 18 35% 12%;
+    --accent: 25 45% 40%;                /* نسخه کمی روشن‌تر از شکلاتی برای تأکید */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 45 25% 95%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 25 20% 20%;
-    --input: 25 20% 20%;
-    --ring: 35 65% 65%;
+    --border: 30 15% 90%;
+    --input: 30 15% 90%;
+    --ring: 25 45% 35%;
 
     --radius: 0.75rem;
 
-    /* Coffee-specific design tokens */
-    --coffee-cream: 35 40% 88%;    /* Warm cream */
-    --coffee-latte: 30 35% 75%;    /* Rich latte */
-    --coffee-medium: 28 50% 40%;   /* Medium warm roast */
-    --coffee-dark: 25 35% 25%;     /* Rich dark brown */
-    --coffee-espresso: 20 25% 15%; /* Deep espresso */
+    /* متغیرهای سفارشی برای گرادینت و سایه */
+    --gradient-main: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--background)));
+    --gradient-background: linear-gradient(180deg, hsl(var(--background)), hsl(var(--card)));
+    --gradient-accent: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)));
     
-    /* Gradients */
-    --gradient-coffee: linear-gradient(135deg, hsl(var(--coffee-latte)), hsl(var(--primary)));
-    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(var(--coffee-dark)));
-    --gradient-gold: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)));
-    
-    /* Shadows */
-    --shadow-warm: 0 10px 30px -10px hsl(var(--coffee-medium) / 0.4);
-    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.3);
-    
-    /* Animations */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    --sidebar-background: 25 12% 12%;
-    --sidebar-foreground: 45 25% 95%;
-    --sidebar-primary: 35 65% 65%;
-    --sidebar-primary-foreground: 25 15% 8%;
-    --sidebar-accent: 25 20% 18%;
-    --sidebar-accent-foreground: 45 25% 95%;
-    --sidebar-border: 25 20% 20%;
-    --sidebar-ring: 35 65% 65%;
+    --shadow-main: 0 10px 30px -10px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.25);
   }
 
   .dark {
-    /* Same colors for consistency - coffee theme works in both modes */
-    --background: 25 15% 8%;
-    --foreground: 45 25% 95%;
-    --card: 25 12% 12%;
-    --card-foreground: 45 25% 95%;
-    --popover: 25 12% 12%;
-    --popover-foreground: 45 25% 95%;
-    --primary: 35 65% 65%;
-    --primary-foreground: 25 15% 8%;
-    --secondary: 25 25% 18%;
-    --secondary-foreground: 45 25% 95%;
-    --muted: 25 20% 15%;
-    --muted-foreground: 35 15% 70%;
-    --accent: 40 85% 75%;
-    --accent-foreground: 25 15% 8%;
+    /* ----- حالت تیره (Dark Mode) ----- */
+    --background: 20 15% 10%;
+    --foreground: 0 0% 98%;
+    --card: 25 15% 14%;
+    --card-foreground: 0 0% 98%;
+    --popover: 20 15% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 30 25% 96%;
+    --primary-foreground: 20 15% 10%;
+    --secondary: 25 15% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 25 15% 14%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 30 25% 90%;
+    --accent-foreground: 20 15% 10%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 45 25% 95%;
-    --border: 25 20% 20%;
-    --input: 25 20% 20%;
-    --ring: 35 65% 65%;
-    --sidebar-background: 25 12% 12%;
-    --sidebar-foreground: 45 25% 95%;
-    --sidebar-primary: 35 65% 65%;
-    --sidebar-primary-foreground: 25 15% 8%;
-    --sidebar-accent: 25 20% 18%;
-    --sidebar-accent-foreground: 45 25% 95%;
-    --sidebar-border: 25 20% 20%;
-    --sidebar-ring: 35 65% 65%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 25 15% 20%;
+    --input: 25 15% 20%;
+    --ring: 30 25% 96%;
   }
 }
 
@@ -111,7 +83,6 @@ All colors MUST be HSL.
     font-family: 'Noto Serif', 'Times New Roman', serif;
   }
 
-  /* Persian/Arabic text support */
   .persian-text {
     font-family: 'Vazir', 'Tahoma', sans-serif;
     direction: rtl;
@@ -126,47 +97,18 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Coffee Menu Item */
-  .coffee-menu-item {
-    @apply relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary to-accent;
-    @apply text-primary-foreground font-semibold text-lg;
-    @apply transition-all duration-500 hover:scale-105 hover:shadow-2xl;
-    @apply border-2 border-accent/20 hover:border-accent/60;
-    box-shadow: var(--shadow-warm);
-  }
-  
-  .coffee-menu-item:hover {
-    box-shadow: var(--shadow-glow);
-    transform: translateY(-2px) scale(1.02);
-  }
-  
-  /* Decorative pattern overlay */
-  .coffee-menu-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 20%, hsl(var(--accent) / 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, hsl(var(--primary) / 0.1) 0%, transparent 50%);
-    pointer-events: none;
-  }
-  
-  /* Logo glow effect */
   .logo-glow {
-    filter: drop-shadow(0 0 20px hsl(var(--accent) / 0.6));
-    transition: var(--transition-smooth);
+    filter: drop-shadow(0 0 20px hsl(var(--primary) / 0.4));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .logo-glow:hover {
-    filter: drop-shadow(0 0 30px hsl(var(--accent) / 0.8));
+    filter: drop-shadow(0 0 30px hsl(var(--primary) / 0.6));
     transform: scale(1.05);
   }
 }
 
 @layer utilities {
-  /* Animation utilities */
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
   }
