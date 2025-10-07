@@ -83,6 +83,8 @@ export default {
         'persian': ['Vazir', 'Tahoma', 'sans-serif'],
         'arabic': ['Amiri', 'Times New Roman', 'serif'],
         'serif': ['Noto Serif', 'Times New Roman', 'serif'],
+        'cursive': ['Great Vibes', 'cursive'],
+        'directional': ['Direction', 'sans-serif'] // فونت شکسته در اینجا اضافه شد
       },
       borderRadius: {
         lg: "var(--radius)",

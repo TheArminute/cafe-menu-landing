@@ -1,49 +1,33 @@
+
 import { Coffee, Instagram, MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import coffeeLogo from "@/assets/coffee-logo.png";
+import coffeeLogo from "@/assets/android-chrome-192x192.png";
 
 const Index = () => {
   const navigate = useNavigate();
   
-  return <div className="min-h-screen bg-gradient-background flex flex-col relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5 mx-0">
-        <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-accent animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 rounded-full bg-primary animate-float stagger-2"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 rounded-full bg-secondary animate-float stagger-3"></div>
-      </div>
-
-      {/* Large, faded 'M' in the background */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
-        <svg
-          className="w-4/5 h-auto text-primary"
-          viewBox="0 0 400 400"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path d="M48 375 L118 100 L200 300 L282 100 L352 375 H300 L230 175 L170 375 H120 L190 175 L120 375 Z" />
-        </svg>
-      </div>
+return <div className="h-full overflow-hidden bg-background flex flex-col justify-center relative overflow-hidden">      
 
       {/* Header with Logo */}
-      <header className="flex justify-center pt-20 md:pt-20 pb-20 md:pb-16">
-        <div className="logo-glow animate-fade-in-up">
-          <img src={coffeeLogo} alt="کافه دلگرم - Delgarm Cafe" className="w-32 h-32 md:w-36 md:h-36 object-contain" />
+
+      <header className="flex justify-center pt-10 md:pt-20 pb-5 md:pb-12">
+        <div className="logo-glow animate-fade-in-up flex justify-center items-center flex-col">
+          <img src={coffeeLogo} alt="کافه ماین - mine cafe" className="object-contain" />
+          <h1 className="font-directional text-7xl md:text-8xl font-bold text-black mb- md:mb-6 tracking-widest">MINE</h1>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center px-6 md:px-8">
+      <main className="flex flex-col items-center px-14 md:px-8">
         {/* Welcome Text */}
-        <div className="text-center space-y-6 md:space-y-8 animate-fade-in-up stagger-1">
-          <h1 className="arabic-text text-5xl md:text-7xl font-bold text-primary mb-4 md:mb-8">mine</h1>
-          <h2 className="persian-text text-xl md:text-3xl text-foreground font-light mb-2 md:mb-4">
-            با مجموعه ای از تلخی ها و شیرینی های زندگی در کنار شما هستیم
-          </h2>
-          <p className="text-muted-foreground text-base md:text-lg max-w-sm md:max-w-md mx-auto leading-relaxed">
+        <div className="text-center space-y-8 md:space-y-8 animate-fade-in-up stagger-1">
+          <p className="persian-text text-xl md:text-2xl text-accent font-semibold max-w-sm md:max-w-md mx-auto leading-relaxed">
             به کافه ماین خوش امدید
           </p>
-        </div>
+          <h2 className="persian-text text-xl md:text-3xl text-foreground font-light mb-2 md:mb-4">
+            با مجموعه ای از تلخی ها و شیرینی ها در کنار شما هستیم
+          </h2>
+         </div>
 
         {/* Menu Section */}
         <div className="w-full max-w-md animate-fade-in-up stagger-2 mt-10 md:mt-12">
@@ -64,32 +48,29 @@ const Index = () => {
           </button>
         </div>
 
-        {/* Spacer to push quote down */}
-        <div className="flex-grow"></div>
-
         {/* Decorative Quote */}
-        <div className="text-center animate-fade-in-up stagger-3 pb-6 pt-12 md:pt-16">
-          <blockquote className="persian-text text-muted-foreground italic text-base md:text-lg font-light">
-            
+        <div className="text-center animate-fade-in-up stagger-3 pt-10 md:pt-16">
+          <blockquote className="persian-text flex justify-center items-center text-muted-foreground italic text-base md:text-lg font-light">
+            <div className="flex space-x-6 rtl:space-x-reverse">
+              {/* Instagram Icon */}
+              <a href="https://www.instagram.com/_cafe.mine_?igsh=MXUydXhzOXRzaHpweQ==" className="w-12 h-12 rounded-full bg-gray-800 backdrop-blur flex items-center justify-center hover:bg-white-700 hover:scale-110 transition-all duration-300 bg-transparent" aria-label="اینستاگرام">
+                <Instagram className="w-5 h-5 text-black" />
+              </a>
+              
+              {/* Location Icon */}
+              <a href="https://maps.app.goo.gl/K7X7sTpGryTWTQJW8" target="_blank" rel="noopener noreferrer" className="w-12 h-18 rounded-full bg-gray-800 backdrop-blur flex items-center justify-center hover:bg-white-700 hover:scale-110 transition-all duration-300 bg-transparent" aria-label="لوکیشن کافه">
+                <MapPin className="w-5 h-5 text-black" />
+              </a>
+            </div>
           </blockquote>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="w-full bg-black py-4 flex justify-center animate-fade-in-up stagger-3">
-        <div className="flex space-x-8 rtl:space-x-reverse">
-          {/* Instagram Icon */}
-          <a href="https://instagram.com" className="w-12 h-12 rounded-full bg-gray-800 backdrop-blur flex items-center justify-center hover:bg-gray-700 hover:scale-110 transition-all duration-300" aria-label="اینستاگرام">
-            <Instagram className="w-5 h-5 text-white" />
-          </a>
-          
-          {/* Location Icon */}
-          <a href="https://maps.google.com/?q=your-cafe-address" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-gray-800 backdrop-blur flex items-center justify-center hover:bg-gray-700 hover:scale-110 transition-all duration-300" aria-label="لوکیشن کافه">
-            <MapPin className="w-5 h-5 text-white" />
-          </a>
-        </div>
-      </footer>
-    </div>;
+      {/* <footer className="w-full py-2 mb-10   flex justify-center animate-fade-in-up stagger-1">
+        
+      </footer> */}
+    </div>
 };
 
 export default Index;
